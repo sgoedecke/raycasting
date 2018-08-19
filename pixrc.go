@@ -1,7 +1,6 @@
 package main
 
 import (
-	"flag"
 	"image"
 	"image/color"
 	"math"
@@ -325,13 +324,6 @@ func turnLeft(s float64) {
 }
 
 func main() {
-	flag.BoolVar(&fullscreen, "f", fullscreen, "fullscreen")
-	flag.IntVar(&width, "w", width, "width")
-	flag.IntVar(&height, "h", height, "height")
-	flag.Float64Var(&scale, "s", scale, "scale")
-	flag.Parse()
-
 	setup()
-
 	pixelgl.Run(run)
 }
